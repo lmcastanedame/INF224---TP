@@ -1,4 +1,4 @@
-
+// Author: Laura Manuela Castañeda Medina
 //
 // main.cpp
 // Created on 21/10/2018
