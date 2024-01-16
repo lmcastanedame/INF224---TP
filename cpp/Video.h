@@ -1,24 +1,21 @@
+#ifndef VIDEO_H
+#define VIDEO_H
+
+#include <iostream>
 #include "MultimediaObject.h"
-#include <string>
 
 class Video : public MultimediaObject {
+public:
+    Video(const std::string& name, const std::string& filepath, int duration);
+
+    int getDuration() const;
+    void setDuration(int duration); 
+
+    virtual void display() const override;
+    virtual void play() const override;
+
 private:
     int duration;
-public:
-    Video(const std::string& name, const std::string& filename, int duration)
-        : MultimediaObject(name, filename), duration(duration) {}
-
-    int getDuration() const { return duration; }
-
-    void setDuration(int newDuration) { duration = newDuration; }
-
-    void display() const override {
-        MultimediaObject::display();
-        std::cout << "Duration: " << duration << " seconds" << std::endl;
-    }
-
-    void play() const override {
-        std::string command = "start " + getFilename();
-        system(command.data());
-    }
 };
+
+#endif /* VIDEO_H */

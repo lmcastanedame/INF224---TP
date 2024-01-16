@@ -1,27 +1,26 @@
-#include "MultimediaObject.h"
+#ifndef PHOTO_H
+#define PHOTO_H
+
 #include <string>
+#include <iostream>
+#include "MultimediaObject.h"
 
 class Photo : public MultimediaObject {
 private:
     double latitude;
     double longitude;
+
 public:
-    Photo(const std::string& name, const std::string& filename, double latitude, double longitude)
-        : MultimediaObject(name, filename), latitude(latitude), longitude(longitude) {}
+    Photo(const std::string& name, const std::string& filename, double latitude, double longitude);
 
-    double getLatitude() const { return latitude; }
-    double getLongitude() const { return longitude; }
+    double getLatitude() const;
+    double getLongitude() const;
 
-    void setLatitude(double newLatitude) { latitude = newLatitude; }
-    void setLongitude(double newLongitude) { longitude = newLongitude; }
+    void setLatitude(double latitude);
+    void setLongitude(double longitude);
 
-    void display() const override {
-        MultimediaObject::display();
-        std::cout << "Latitude: " << latitude << ", Longitude: " << longitude << std::endl;
-    }
-
-    void play() const override {
-        std::string command = "start \"\" \"" + getFilename() + "\"";
-        system(command.data());
-    }
+    virtual void display() const override;
+    virtual void play() const override;
 };
+
+#endif /* PHOTO_H */
