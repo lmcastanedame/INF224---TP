@@ -10,26 +10,37 @@
 #include "Video.h"
 #include "Film.h"
 
-int Test() {
+int main() {
     // Create a chapters array
-    int chapters[] = {5, 10, 15};
+    int chapters[] = {10, 20, 30};
 
     // Create a Film object
-    Film film("Test Film", "/path/to/film", 30, chapters, 3);
+    Film film("Test Film", "Video.mp4", 120, chapters, 3);
 
     // Display the Film object
     film.display();
 
+    // Display the chapters
+    std::cout << "Chapters: " << std::endl;
+    film.displayChapters();
+
     // Modify the chapters array
-    chapters[0] = 20;
-    chapters[1] = 25;
-    chapters[2] = 30;
+    int newChapters[] = {20, 25, 30};
+    film.setChapters(newChapters, 3);
 
     // Display the Film object again
     film.display();
 
-    // The Film object's chapters should not have changed,
-    // because it made a copy of the array
+    // Display the chapters
+    std::cout << "Chapters: " << std::endl;
+    film.displayChapters();
+
+    // Get the chapters
+    int* retrievedChapters = film.getChapters();
+    for (int i = 0; i < film.getNumChapters(); i++) {
+        std::cout << retrievedChapters[i] << " ";
+    }
+    std::cout << std::endl;
 
     return 0;
 }
@@ -73,14 +84,14 @@ int Test2(int argc, const char* argv[])
     return 0;
 }
 
-int main(int argc, const char* argv[])
+int Test3(int argc, const char* argv[])
 {
     // Create an array of pointers to MultimediaObject
     MultimediaObject* objects[4];
 
     // Create instances of MultimediaObject 
-    objects[0] = new MultimediaObject("Object 1", "file1.txt");
-    objects[1] = new MultimediaObject("Object 2", "file2.txt");
+    objects[0] = new Photo("Photo 1", "Photo.png", 100, 200);
+    objects[1] = new Video("Video 1", "Video.mp4", 10);
     objects[2] = new Photo("Photo 1", "Photo.png", 100, 200);
     objects[3] = new Video("Video 1", "Video.mp4", 10);
 
