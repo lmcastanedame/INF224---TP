@@ -5,6 +5,9 @@
 Video::Video(const std::string& name, const std::string& filepath, int duration)
     : MultimediaObject(name, filepath), duration(duration) {}
 
+Video::Video(const Video& other) 
+    : MultimediaObject(other), duration(other.duration) {}
+
 // Implement the display method
 void Video::display() const {
     MultimediaObject::display();

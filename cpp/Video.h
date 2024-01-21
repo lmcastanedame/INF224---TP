@@ -7,6 +7,7 @@
 class Video : public MultimediaObject {
 public:
     Video(const std::string& name, const std::string& filepath, int duration);
+    Video(const Video& other); // Copy constructor
 
     int getDuration() const;
     void setDuration(int duration); 

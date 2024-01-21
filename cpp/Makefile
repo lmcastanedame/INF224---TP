@@ -14,7 +14,7 @@ PROG = MultimediaProject
 #
 # Fichiers sources (NE PAS METTRE les .h ni les .o seulement les .cpp)
 #
-SOURCES = MultimediaObject.cpp main.cpp Photo.cpp Video.cpp Film.cpp
+SOURCES = MultimediaObject.cpp main.cpp Photo.cpp Video.cpp Film.cpp Manager.cpp
 
 #
 # Fichiers objets (ne pas modifier sauf si l'extension n'est pas .cpp)

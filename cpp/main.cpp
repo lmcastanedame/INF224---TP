@@ -5,12 +5,70 @@
 //
 
 #include <iostream>
+#include <string>
+#include <vector>
+#include <memory> // for std::shared_ptr
 #include "MultimediaObject.h"
 #include "Photo.h"
 #include "Video.h"
 #include "Film.h"
+#include "Group.h"
+#include "Manager.h"
 
 int main() {
+    Manager manager;
+
+    auto photo1 = manager.createPhoto("Photo1", "/path/to/photo1", 1.0, 1.0);
+    auto photo2 = manager.createPhoto("Photo2", "/path/to/photo2", 2.0, 2.0);
+    auto video = manager.createVideo("Video", "/path/to/video", 120);
+    std::vector<int> chapters = {30, 30, 60};
+    auto film = manager.createFilm("Film", "/path/to/film", 120, chapters);
+
+    auto group1 = manager.createGroup("Group 1");
+    group1->push_back(photo1);
+    group1->push_back(photo2);
+
+    auto group2 = manager.createGroup("Group 2");
+    group2->push_back(video);
+    group2->push_back(film);
+
+    // Test the display methods
+    photo1->display();
+    video->display();
+    film->display();
+    group1->display();
+    group2->display();
+
+    return 0;
+}
+
+int Test5() {
+    auto photo1 = std::make_shared<Photo>("Photo1", "/path/to/photo1", 1.0, 1.0);
+    auto photo2 = std::make_shared<Photo>("Photo2", "/path/to/photo2", 2.0, 2.0);
+    auto video = std::make_shared<Video>("Video", "/path/to/video", 120);
+    int chapters[] = {30, 30, 60};
+    auto film = std::make_shared<Film>("Film", "/path/to/film", 120, chapters, 3);
+
+    auto group1 = std::make_shared<Group<MultimediaObject>>("Group 1");
+    group1->push_back(photo1);
+    group1->push_back(photo2);
+
+    auto group2 = std::make_shared<Group<MultimediaObject>>("Group 2");
+    group2->push_back(video);
+    group2->push_back(film);
+
+    Group<Group<MultimediaObject>> group3("Group 3");
+    group3.push_back(group1);
+    group3.push_back(group2);
+
+    group1->display();
+    group2->display();
+    group3.display();
+
+    return 0;
+}
+
+int Test4() {
     // Create a chapters array
     int chapters[] = {10, 20, 30};
 

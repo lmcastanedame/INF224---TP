@@ -9,6 +9,9 @@ MultimediaObject::~MultimediaObject() {
     std::cout << "Destroying MultimediaObject " << name << std::endl;
 }
 
+MultimediaObject::MultimediaObject(const MultimediaObject& other) 
+    : name(other.name), filename(other.filename) {}
+
 std::string MultimediaObject::getName() const {
     return name;
 }

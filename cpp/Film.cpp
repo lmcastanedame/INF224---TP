@@ -9,6 +9,27 @@ Film::Film(const std::string& name, const std::string& filepath, int duration, i
     
     }
 
+Film::Film(const Film& other) : Video(other) {
+    numChapters = other.numChapters;
+    chapters = new int[numChapters];
+    for (int i = 0; i < numChapters; i++) {
+        chapters[i] = other.chapters[i];
+    }
+}
+
+Film& Film::operator=(const Film& other) {
+    if (this != &other) {
+        Video::operator=(other);
+        delete[] chapters;
+        numChapters = other.numChapters;
+        chapters = new int[numChapters];
+        for (int i = 0; i < numChapters; i++) {
+            chapters[i] = other.chapters[i];
+        }
+    }
+    return *this;
+}
+
 Film::~Film() {
     delete[] chapters;
 }

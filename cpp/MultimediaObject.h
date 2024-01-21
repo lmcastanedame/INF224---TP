@@ -8,6 +8,7 @@ class MultimediaObject {
 public:
     MultimediaObject();
     MultimediaObject(const std::string& name, const std::string& filename);
+    MultimediaObject(const MultimediaObject& other);
     virtual ~MultimediaObject();
 
     std::string getName() const;
