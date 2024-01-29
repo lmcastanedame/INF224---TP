@@ -15,7 +15,13 @@
 #include "Group.h"
 #include "Manager.h"
 
+#include "tcpserver.h"
+
 int main() {
+    
+}
+
+int Test6() {
     Manager manager;
 
     auto photo1 = manager.createPhoto("Photo1", "/path/to/photo1", 1.0, 1.0);
