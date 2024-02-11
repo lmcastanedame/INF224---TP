@@ -1,0 +1,8 @@
+MultimediaObject.o: MultimediaObject.cpp MultimediaObject.h
+main.o: main.cpp MultimediaObject.h Photo.h Video.h Film.h Group.h \
+ Manager.h tcpserver.h ccsocket.h
+Photo.o: Photo.cpp Photo.h MultimediaObject.h
+Video.o: Video.cpp Video.h MultimediaObject.h
+Film.o: Film.cpp Film.h Video.h MultimediaObject.h
+Manager.o: Manager.cpp Manager.h MultimediaObject.h Photo.h Video.h \
+ Film.h Group.h
