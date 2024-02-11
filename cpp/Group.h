@@ -5,6 +5,7 @@
 #include <string>
 #include "MultimediaObject.h"
 #include <memory> // for std::shared_ptr
+#include <sstream>
 
 template <typename T>
 using TPtr = std::shared_ptr<T>;
@@ -16,15 +17,16 @@ private:
 
 public:
     Group(const std::string& name) : name(name) {};
-    std::string getName() const;
+    std::string getName() const { return name; }
 
-    void display() const {
-        std::cout << "Group: " << name << std::endl;
+    std::string display() const {
+        std::ostringstream oss;
+        oss << "Group: " << name << std::endl;
         for (const TPtr<T>& object : *this) {
-            object->display();
+            oss << object->display() << std::endl;
         }
+        return oss.str();
     }
-    
 };
 
 #endif // GROUP_H

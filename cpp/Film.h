@@ -20,7 +20,7 @@ public:
     int getNumChapters() const;
     void displayChapters() const ;
 
-    virtual void display() const override;
+    virtual std::string display() const override;
 };
 
 #endif // FILM_H

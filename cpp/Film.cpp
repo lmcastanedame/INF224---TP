@@ -57,7 +57,10 @@ void Film::displayChapters() const {
     }
 }
 
-void Film::display() const {
-    Video::display();
-    std::cout << "Number of chapters: " << numChapters << std::endl;
+std::string Film::display() const {
+    // Call the base class display method and store the result.
+    std::string baseInfo = Video::display();
+    // Convert latitude and longitude to strings and concatenate.
+    std::string info = baseInfo + ", Number of chapters: " + std::to_string(numChapters);
+    return info;
 }

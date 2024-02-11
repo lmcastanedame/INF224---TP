@@ -18,7 +18,7 @@ public:
     void setFilename(const std::string& filename);
 
     virtual void play() const;
-    virtual void display() const;
+    virtual std::string display() const;
 
 private:
     std::string name;

@@ -12,7 +12,7 @@ public:
     int getDuration() const;
     void setDuration(int duration); 
 
-    virtual void display() const override;
+    virtual std::string display() const override;
     virtual void play() const override;
 
 private:

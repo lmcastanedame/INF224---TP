@@ -40,12 +40,12 @@ std::shared_ptr<Group<MultimediaObject>> Manager::createGroup(const std::string&
     return group;
 }
 
-void Manager::displayMultimediaObject(const std::string& name) const {
+std::string Manager::displayMultimediaObject(const std::string& name) const {
     auto it = multimediaObjects.find(name);
     if (it != multimediaObjects.end()) {
-        it->second->display();
+        return it->second->display();
     } else {
-        std::cout << "Multimedia object not found" << std::endl;
+        return "Multimedia object not found.";
     }
 }
 

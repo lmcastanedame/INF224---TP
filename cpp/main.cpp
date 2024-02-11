@@ -18,17 +18,13 @@
 #include "tcpserver.h"
 
 int main() {
-    
-}
-
-int Test6() {
     Manager manager;
 
-    auto photo1 = manager.createPhoto("Photo1", "/path/to/photo1", 1.0, 1.0);
-    auto photo2 = manager.createPhoto("Photo2", "/path/to/photo2", 2.0, 2.0);
-    auto video = manager.createVideo("Video", "/path/to/video", 120);
+    auto photo1 = manager.createPhoto("Photo1", "Photo.png", 1.0, 1.0);
+    auto photo2 = manager.createPhoto("Photo2", "Photo.png", 2.0, 2.0);
+    auto video = manager.createVideo("Video", "Video.mp4", 120);
     std::vector<int> chapters = {30, 30, 60};
-    auto film = manager.createFilm("Film", "/path/to/film", 120, chapters);
+    auto film = manager.createFilm("Film", "Video.mp4", 120, chapters);
 
     auto group1 = manager.createGroup("Group 1");
     group1->push_back(photo1);
@@ -39,9 +35,9 @@ int Test6() {
     group2->push_back(film);
 
     // Test the display methods
-    photo1->display();
-    video->display();
-    film->display();
+    photo1->play();
+    video->play();
+    film->play();
     group1->display();
     group2->display();
 

@@ -19,7 +19,7 @@ public:
     void setLatitude(double latitude);
     void setLongitude(double longitude);
 
-    virtual void display() const override;
+    virtual std::string display() const override;
     virtual void play() const override;
 };
 

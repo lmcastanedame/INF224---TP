@@ -25,7 +25,8 @@ void MultimediaObject::play() const {
     std::cout << "Playing " << name << " from file " << filename << std::endl;
 }
 
-void MultimediaObject::display() const {
-    // Provide a definition for the display function
-    std::cout << "Name: " << name << ", Filename: " << filename << std::endl;
+std::string MultimediaObject::display() const {
+    // Construct a string that contains the name and filename
+    std::string info = "Name: " + name + ", Filename: " + filename;
+    return info;
 }

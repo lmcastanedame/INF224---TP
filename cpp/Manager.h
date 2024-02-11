@@ -22,7 +22,7 @@ public:
     std::shared_ptr<Film> createFilm(const std::string& name, const std::string& pathname, int duration, const std::vector<int>& chapters);
     std::shared_ptr<Group<MultimediaObject>> createGroup(const std::string& name);
 
-    void displayMultimediaObject(const std::string& name) const;
+    std::string displayMultimediaObject(const std::string& name) const;
     void displayGroup(const std::string& name) const;
 
     void playMultimediaObject(const std::string& name) const;

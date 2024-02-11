@@ -7,10 +7,9 @@
 #include <cstring>
 #include <cstdlib>
 #if defined(_WIN32) || defined(_WIN64)
-#define _WIN32_WINNT 0x0600
 #include <winsock2.h>
 #include <ws2tcpip.h>
-#pragma comment(lib, "ws2_64.lib")
+#pragma comment(lib, "ws2_32.lib")
 
 #else
 #include <unistd.h>      // fcntl.h  won't compile without unistd.h !
@@ -20,7 +19,6 @@
 #include <fcntl.h>
 #include <csignal>
 #include "ccsocket.h"
-
 
 using namespace std;
 

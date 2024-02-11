@@ -6,14 +6,18 @@ Photo::Photo(const std::string& name, const std::string& filename, double latitu
         : MultimediaObject(name, filename), latitude(latitude), longitude(longitude) {}
 
 // Implement the display method
-void Photo::display() const {
-    MultimediaObject::display();
-    std::cout << "Latitude: " << latitude << ", Longitude: " << longitude << std::endl;
+std::string Photo::display() const {
+    // Call the base class display method and store the result.
+    std::string baseInfo = MultimediaObject::display();
+    // Convert latitude and longitude to strings and concatenate.
+    std::string info = baseInfo + ", Latitude: " + std::to_string(latitude) + ", Longitude: " + std::to_string(longitude);
+    return info;
 }
+
 
 // Implement the play method
 void Photo::play() const {
-    std::string command = "start \"\" \"" + getFilename() + "\"";
+    std::string command = "imagej \"\" \"" + getFilename() + "\"";
     system(command.c_str());
 }
 

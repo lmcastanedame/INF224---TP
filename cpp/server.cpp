@@ -4,43 +4,75 @@
 //  Eric Lecolinet - Telecom ParisTech - 2016.
 //
 
-#include <memory>
-#include <string>
-#include <iostream>
-#include <sstream>
+#include "Manager.h" // Ensure Manager.h includes all necessary multimedia and group definitions
 #include "tcpserver.h"
+#include <memory>
+#include <sstream>
+#include <iostream>
+#include <map>
 
 const int PORT = 3331;
 
+int main(int argc, char* argv[]) {
+    Manager manager;
 
-int main(int argc, char* argv[])
-{
-  // cree le TCPServer
-  auto* server =
-  new TCPServer( [&](std::string const& request, std::string& response) {
+    auto* server = new TCPServer([&](std::string const& request, std::string& response) {
+        std::istringstream requestStream(request);
+        std::string command;
+        requestStream >> command;
 
-    // the request sent by the client to the server
-    std::cout << "request: " << request << std::endl;
+        if (command == "CREATE_PHOTO") {
+            std::string name, pathname;
+            double latitude, longitude;
+            requestStream >> name >> pathname >> latitude >> longitude;
+            auto photo = manager.createPhoto(name, pathname, latitude, longitude);
+            response = "Photo created: " + name;
+        }
+        else if (command == "CREATE_VIDEO") {
+            std::string name, pathname;
+            int duration;
+            requestStream >> name >> pathname >> duration;
+            auto video = manager.createVideo(name, pathname, duration);
+            response = "Video created: " + name;
+        }
+        else if (command == "SEARCH" || command == "DISPLAY") {
+            std::string name;
+            requestStream >> name;
+            response = manager.displayMultimediaObject(name);
+            // response = "Displayed: " + name;
+        }
+        else if (command == "PLAY") {
+            std::string name;
+            requestStream >> name;
+            manager.playMultimediaObject(name);
+            response = "Playing: " + name;
+        }
+        else if (command == "CREATE_GROUP") {
+            std::string name;
+            requestStream >> name;
+            manager.createGroup(name);
+            response = "Group created: " + name;
+        }
+        else if (command == "DISPLAY_GROUP") {
+            std::string name;
+            requestStream >> name;
+            manager.displayGroup(name);
+            response = "Group displayed: " + name;
+        }
+        else {
+            response = "Unknown command";
+        }
 
-    // the response that the server sends back to the client
-    response = "RECEIVED: " + request;
+        return true; // Keep connection alive
+    });
 
-    // return false would close the connecytion with the client
-    return true;
-  });
+    std::cout << "Starting Server on port " << PORT << std::endl;
+    int status = server->run(PORT);
 
+    if (status < 0) {
+        std::cerr << "Could not start Server on port " << PORT << std::endl;
+        return 1;
+    }
 
-  // lance la boucle infinie du serveur
-  std::cout << "Starting Server on port " << PORT << std::endl;
-
-  int status = server->run(PORT);
-
-  // en cas d'erreur
-  if (status < 0) {
-    std::cerr << "Could not start Server on port " << PORT << std::endl;
-    return 1;
-  }
-
-  return 0;
+    return 0;
 }
-
