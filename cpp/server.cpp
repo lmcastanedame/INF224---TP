@@ -47,18 +47,6 @@ int main(int argc, char* argv[]) {
             manager.playMultimediaObject(name);
             response = "Playing: " + name;
         }
-        else if (command == "CREATE_GROUP") {
-            std::string name;
-            requestStream >> name;
-            manager.createGroup(name);
-            response = "Group created: " + name;
-        }
-        else if (command == "DISPLAY_GROUP") {
-            std::string name;
-            requestStream >> name;
-            manager.displayGroup(name);
-            response = "Group displayed: " + name;
-        }
         else {
             response = "Unknown command";
         }
