@@ -6,6 +6,10 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+/**
+ * MainFrame class that extends JFrame for creating the main application window.
+ * It includes a GUI for sending commands to a server and displaying responses.
+ */
 public class MainFrame extends JFrame {
     private static final long serialVersionUID = 1L;
     private JTextArea textArea;
@@ -16,6 +20,9 @@ public class MainFrame extends JFrame {
     private final String serverAddress = "localhost"; // or the IP address of your server
     private final int serverPort = 3331; // the port number your server is listening on
 
+    /**
+     * Constructs the MainFrame and initializes UI components and actions.
+     */
     public MainFrame() {
         // Create components
         textArea = new JTextArea(20, 30);
@@ -97,7 +104,10 @@ public class MainFrame extends JFrame {
         this.pack();
         this.setVisible(true);
     }
-
+    
+    /**
+     * Displays a help dialog with available commands.
+     */
     private void displayHelp() {
         JOptionPane.showMessageDialog(this, "Available Commands:\n" +
                 "CREATE_PHOTO <name> <pathname> <latitude> <longitude> - Create a new photo object.\n" +
@@ -105,15 +115,24 @@ public class MainFrame extends JFrame {
                 "SEARCH <name> - Search for a multimedia object by name and display its details.\n" +
                 "PLAY <name> - Play a multimedia object by name.\n" +
                 "quit - Exit the client.\n" +
+                "Video available to play - Video.mp4" +
+                "Photo available to play - Photo.png" +
                 "help - Display this help message.", "Help", JOptionPane.INFORMATION_MESSAGE);
     }
 
+    /**
+     * Configures the main window settings.
+     */
     private void configureWindow() {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.pack();
         this.setVisible(true);
     }
 
+    /**
+     * Sends a command to the server and processes the response.
+     * @param command The command to send.
+     */
     private void sendCommandToServer(String command) {
         new Thread(() -> {
             try (Socket socket = new Socket(serverAddress, serverPort);
@@ -145,7 +164,10 @@ public class MainFrame extends JFrame {
     }
     
     
-
+    /**
+     * Main method to run the application.
+     * @param args Command-line arguments (not used).
+     */
     public static void main(String[] args) {
         // For MacOSX users
         System.setProperty("apple.laf.useScreenMenuBar", "true");
