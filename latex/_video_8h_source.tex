@@ -1,0 +1,31 @@
+\doxysection{Video.\+h}
+\hypertarget{_video_8h_source}{}\label{_video_8h_source}\index{cpp/Video.h@{cpp/Video.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VIDEO\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VIDEO\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}MultimediaObject.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_video}{Video}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_multimedia_object}{MultimediaObject}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_video_a1a11009e84b35c3d50b123db8edef4f0}{Video}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::string\&\ filepath,\ \textcolor{keywordtype}{int}\ duration);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_video_a1a11009e84b35c3d50b123db8edef4f0}{Video}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_video}{Video}}\&\ other);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_video_a57f903f1d582ac6ef88922c7a6cb8f7f}{getDuration}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_video_aca0f92f98c7b6377aaa23af1645b8172}{setDuration}}(\textcolor{keywordtype}{int}\ duration);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_video_a46a9d058338f2c82b3a5cd6c7262d4b3}{display}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_video_a89e11497f4f200f387805b10bd42922d}{play}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ duration;\ }
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ VIDEO\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
