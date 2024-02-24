@@ -1,0 +1,291 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{INF224 - Travaux Pratiques}\label{inf224---travaux-pratiques}
+
+\subsection{General information}\label{general-information}
+
+\subsection{Questions C++}\label{questions-c}
+
+\subsubsection{4e Etape: Photos et
+videos}\label{e-etape-photos-et-videos}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  The methods described, which are to be declared in the base class and
+  overridden in the subclasses without implementation in the base class,
+  are known as \textbf{pure virtual functions}. These functions are
+  declared by assigning 0 to them in the declaration within the base
+  class, making the base class abstract. This means objects of the base
+  class cannot be instantiated directly, only objects of its subclasses
+  can be.
+
+  To declare this method:
+
+  \texttt{virtual\ void\ play()\ const\ =\ 0;}
+\item
+  The reason why objects of the base class can no longer be instantiate
+  after adding a pure virtual function is because the class becomes
+  abstract. An abstract class is intended to provide a common interface
+  and shared functionality for its subclasses, but it is incomplete on
+  its own because of the presence of one or more pure virtual functions.
+  Thus, we can only instantiate objects of classes that provide concrete
+  implementations for all pure virtual functions inherited from their
+  base class.
+\end{enumerate}
+
+\subsubsection{5e Etape: Traitement uniforme (en utilisant le
+polymorphisme)}\label{e-etape-traitement-uniforme-en-utilisant-le-polymorphisme}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  The characteristic property of object-oriented programming that allows
+  for the uniform treatment of a list containing both photos and videos,
+  without concern for their specific types, is \textbf{polymorphism}.
+  Polymorphism enables objects of different classes to be treated
+  through the same interface, primarily through the use of base class
+  pointers or references to access derived class objects. This
+  capability is crucial for implementing a uniform behavior in a
+  collection of objects that might belong to different classes but are
+  related by inheritance.
+\item
+  In the case of C++, to make use of polymorphism, it is specifically
+  necessary to:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Declare methods in the base class as virtual, so they can be
+    overridden in derived classes. This includes both the methods for
+    displaying attributes and for “playing” the objects.
+  \item
+    Use pointers or references to base class types to refer to objects
+    of the derived classes. This is because C++ needs to know at compile
+    time the size of the objects it deals with, and using pointers or
+    references allows the program to handle objects of different sizes
+    (due to potentially different data members in derived classes).
+  \end{itemize}
+\item
+  The elements of the array in \texttt{main.cpp} should therefore be
+  pointers (or smart pointers, like \texttt{std::unique\_ptr} or
+  \texttt{std::shared\_ptr}) to the base class, not objects of the base
+  class. This allows the array to hold references to both Photo and
+  Video objects, treating them through their common base interface but
+  allowing for the specific behavior of each derived class to be
+  executed.
+
+  \begin{itemize}
+  \item
+    This is different from Java, where all non-primitive types are
+    inherently handled via references, and you can directly store
+    objects of derived classes in an array or collection of the base
+    class type without the explicit need for pointers.
+  \item
+    The reason for using pointers in C++ instead of objects is related
+    to the slicing problem, where if objects of derived classes were
+    assigned directly to elements of a base class array, any data or
+    functions specific to the derived classes would be “sliced” off,
+    leaving only the base class portion of the objects. Using pointers
+    prevents slicing by allowing the program to access the full derived
+    class objects.
+  \end{itemize}
+\end{enumerate}
+
+\subsubsection{7e étape. Destruction et copie des
+objets}\label{e-uxe9tape.-destruction-et-copie-des-objets}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Which classes need modifications to prevent memory leaks when
+  objects are destroyed?}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Any class that allocates dynamic memory with new must release that
+    memory with delete to prevent memory leaks. The Film class allocates
+    memory for an array of chapter durations, so it needs a destructor
+    to deallocate that memory.
+  \end{itemize}
+\item
+  \textbf{What is the problem with copying objects that have instance
+  variables which are pointers, and what are the solutions?}
+
+  \begin{itemize}
+  \item
+    The problem with copying such objects is the shallow copy behavior
+    of the default copy constructor and assignment operator provided by
+    C++. A shallow copy duplicates the pointer values but not the
+    pointed-to data, leading to situations where multiple objects point
+    to the same memory location. This can cause undefined behavior when
+    one object modifies the data or deallocates the memory, affecting
+    all objects sharing that pointer.
+  \item
+    \textbf{Solutions include:}
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Implementing a deep copy, where not only the pointers but also the
+      pointed-to data are duplicated. This ensures each object manages
+      its own copy of the data.
+    \item
+      Using smart pointers (e.g., \texttt{std::unique\_ptr},
+      \texttt{std::shared\_ptr}) that automatically manage memory and
+      can handle copying semantics correctly, though std::unique\_ptr
+      requires explicit handling for copy operations since it owns the
+      resource exclusively.
+    \end{itemize}
+  \end{itemize}
+\end{enumerate}
+
+\subsubsection{8e étape. Créer des
+groupes}\label{e-uxe9tape.-cruxe9er-des-groupes}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Why use a list of object pointers?}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Using a list of pointers (specifically, pointers to the base class)
+    allows the list to store objects of any derived class, enabling
+    polymorphic behavior. This is necessary because the actual objects
+    might have different sizes and behaviors, and we want to treat them
+    through a common interface defined by the base class. This approach
+    is similar to Java’s use of references for all objects, where Java
+    automatically handles objects polymorphically without needing to
+    explicitly use pointers.
+  \end{itemize}
+\item
+  \textbf{Why objects are not destroyed when a group is destroyed?}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Since an object can belong to multiple groups, destroying an object
+    when a group is destroyed would lead to undefined behavior when
+    other groups try to access the destroyed object. This is managed by
+    ensuring ownership of the objects’ lifetimes is handled outside the
+    group, typically by the code that instantiates the objects. This
+    approach requires careful memory management to prevent memory leaks,
+    as you must ensure objects are deleted when no longer needed.
+  \end{itemize}
+\end{enumerate}
+
+\subsubsection{10e étape. Gestion cohérente des
+données}\label{e-uxe9tape.-gestion-cohuxe9rente-des-donnuxe9es}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{How to ensure objects are only created through the
+  MediaManager class to maintain database integrity?}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Make the constructors of the multimedia and group classes private or
+    protected, ensuring they cannot be directly instantiated with new by
+    external code. Then, make MediaManager a friend class of these
+    classes, allowing MediaManager to access their constructors while
+    other classes cannot.
+  \end{itemize}
+\end{enumerate}
+
+\subsection{Questions Java}\label{questions-java}
+
+\subsubsection{1ere Etape: Fenêtre principale et quelques
+interacteurs}\label{ere-etape-fenuxeatre-principale-et-quelques-interacteurs}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  When we launch the program and interact with it by clicking the
+  buttons to add text and resizing the window:
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \item
+    \textbf{Text Addition:} Each button press adds a specific line of
+    text to the \texttt{JTextArea}, as programmed. The two buttons add
+    their respective text lines, demonstrating how button actions can
+    manipulate other components in the UI.
+  \item
+    \textbf{Window Resizing and Text Area Behavior:} Without a
+    \texttt{JScrollPane}, the \texttt{JTextArea} might not handle
+    overflow of text gracefully. As we add more text than the visible
+    area can show, we might not be able to see all the text by
+    scrolling. This is because \texttt{JTextArea} does not automatically
+    include scrolling capability.
+  \item
+    \textbf{The Need for JScrollPane:} To make the \texttt{JTextArea}
+    fully usable, especially when the amount of text exceeds the visible
+    area, incorporating it into a \texttt{JScrollPane} is necessary. The
+    \texttt{JScrollPane} provides a scrollable view of the
+    \texttt{JTextArea}, allowing to navigate through all the entered
+    text regardless of the amount, addressing usability concerns that
+    become apparent through interaction and window resizing.
+  \end{enumerate}
+\end{enumerate}
+
+\end{document}

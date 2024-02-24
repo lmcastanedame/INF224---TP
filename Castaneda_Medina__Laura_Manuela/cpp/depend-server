@@ -1,0 +1,6 @@
+server.o: server.cpp Manager.h MultimediaObject.h Photo.h Video.h Film.h \
+ Group.h tcpserver.h ccsocket.h
+tcpserver.o: tcpserver.cpp tcpserver.h ccsocket.h
+ccsocket.o: ccsocket.cpp ccsocket.h
+Manager.o: Manager.cpp Manager.h MultimediaObject.h Photo.h Video.h \
+ Film.h Group.h

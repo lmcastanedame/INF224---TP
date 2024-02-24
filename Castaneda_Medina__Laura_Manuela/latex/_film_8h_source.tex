@@ -1,0 +1,37 @@
+\doxysection{Film.\+h}
+\hypertarget{_film_8h_source}{}\label{_film_8h_source}\index{cpp/Film.h@{cpp/Film.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FILM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FILM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Video.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_film}{Film}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_video}{Video}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}*\ chapters;\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ numChapters;\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_film_a291c1f68f0f077866809535e2b022431}{Film}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::string\&\ filepath,\ \textcolor{keywordtype}{int}\ duration,\ \textcolor{keywordtype}{int}*\ chapters,\ \textcolor{keywordtype}{int}\ numChapters);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_film_a291c1f68f0f077866809535e2b022431}{Film}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_film}{Film}}\&\ other);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_film}{Film}}\&\ \mbox{\hyperlink{class_film_a3162aa6c8d939fcd5afe49d47202cbf5}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_film}{Film}}\&\ other);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_film_a8dab653f8a6c0635ca5ddbe0bbdd9a25}{\string~Film}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_film_a1b1d5672eb356f00e1f891bf9e8bd9f1}{setChapters}}(\textcolor{keywordtype}{int}*\ chapters,\ \textcolor{keywordtype}{int}\ numChapters);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}*\ \mbox{\hyperlink{class_film_a3a6cc224310ab18c72e26a8d0718e45c}{getChapters}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_film_a7ac2d5a81543ce20c710d460c3bba1bc}{getNumChapters}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_film_aa8595702a0c221bbd8c7bc6cb5c66d92}{displayChapters}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{class_film_a53113e41265ec38404c9dae1866dbeca}{display}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FILM\_H}}
+
+\end{DoxyCode}

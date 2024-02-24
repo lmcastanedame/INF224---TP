@@ -1,0 +1,97 @@
+\doxysection{Group\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_group}{}\label{class_group}\index{Group$<$ T $>$@{Group$<$ T $>$}}
+
+
+Template class for managing groups of multimedia objects.  
+
+
+
+
+{\ttfamily \#include $<$Group.\+h$>$}
+
+Inheritance diagram for Group\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_group}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_group_af5e1e4f88f2ef4c53eaaf8833f1d4c56}{Group}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_group}{Group} object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_group_a850f44403bbd619a350b7d82618f05a7}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the group. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_group_aac0235fa838f2305d0c158535d33686f}{display}} () const
+\begin{DoxyCompactList}\small\item\em Displays information about the group and its multimedia objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Group$<$ T $>$}
+Template class for managing groups of multimedia objects. 
+
+Inherits from std\+::list to manage collections of multimedia objects using shared pointers. Allows for the aggregation and management of any type that inherits from \doxylink{class_multimedia_object}{Multimedia\+Object}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of multimedia object, must be derived from \doxylink{class_multimedia_object}{Multimedia\+Object} or be \doxylink{class_multimedia_object}{Multimedia\+Object} itself. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_group_af5e1e4f88f2ef4c53eaaf8833f1d4c56}\label{class_group_af5e1e4f88f2ef4c53eaaf8833f1d4c56} 
+\index{Group$<$ T $>$@{Group$<$ T $>$}!Group@{Group}}
+\index{Group@{Group}!Group$<$ T $>$@{Group$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Group()}{Group()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_group}{Group}}$<$ T $>$\mbox{\hyperlink{class_group}{\+::\+Group}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \doxylink{class_group}{Group} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the group. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_group_aac0235fa838f2305d0c158535d33686f}\label{class_group_aac0235fa838f2305d0c158535d33686f} 
+\index{Group$<$ T $>$@{Group$<$ T $>$}!display@{display}}
+\index{display@{display}!Group$<$ T $>$@{Group$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string \mbox{\hyperlink{class_group}{Group}}$<$ T $>$\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Displays information about the group and its multimedia objects. 
+
+Iterates through the list of multimedia objects, invoking their display method and concatenating the result into a single string.
+
+\begin{DoxyReturn}{Returns}
+std\+::string A string containing information about the group and its objects. 
+\end{DoxyReturn}
+\Hypertarget{class_group_a850f44403bbd619a350b7d82618f05a7}\label{class_group_a850f44403bbd619a350b7d82618f05a7} 
+\index{Group$<$ T $>$@{Group$<$ T $>$}!getName@{getName}}
+\index{getName@{getName}!Group$<$ T $>$@{Group$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string \mbox{\hyperlink{class_group}{Group}}$<$ T $>$\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the name of the group. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The name of the group. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/Group.\+h\end{DoxyCompactItemize}
