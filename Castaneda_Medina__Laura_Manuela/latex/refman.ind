@@ -1,0 +1,227 @@
+\begin{theindex}
+
+  \item {accept}
+    \subitem {ServerSocket}, \hyperpage{29}
+
+  \indexspace
+
+  \item {bind}
+    \subitem {ServerSocket}, \hyperpage{29}
+    \subitem {Socket}, \hyperpage{32}
+
+  \indexspace
+
+  \item {Callback}
+    \subitem {TCPServer}, \hyperpage{38}
+  \item {Client}, \hyperpage{11}
+    \subitem {Client}, \hyperpage{11}
+    \subitem {main}, \hyperpage{11}
+    \subitem {send}, \hyperpage{11}
+  \item {connect}
+    \subitem {Socket}, \hyperpage{32}
+  \item {cpp/ccsocket.h}, \hyperpage{43}
+  \item {cpp/Film.h}, \hyperpage{45}
+  \item {cpp/Group.h}, \hyperpage{46}
+  \item {cpp/Manager.h}, \hyperpage{46}
+  \item {cpp/MultimediaObject.h}, \hyperpage{47}
+  \item {cpp/Photo.h}, \hyperpage{47}
+  \item {cpp/tcpserver.h}, \hyperpage{48}
+  \item {cpp/Video.h}, \hyperpage{48}
+  \item {createFilm}
+    \subitem {Manager}, \hyperpage{19}
+  \item {createGroup}
+    \subitem {Manager}, \hyperpage{20}
+  \item {createPhoto}
+    \subitem {Manager}, \hyperpage{20}
+  \item {createVideo}
+    \subitem {Manager}, \hyperpage{20}
+
+  \indexspace
+
+  \item {deleteGroup}
+    \subitem {Manager}, \hyperpage{21}
+  \item {deleteMultimediaObject}
+    \subitem {Manager}, \hyperpage{21}
+  \item {display}
+    \subitem {Film}, \hyperpage{14}
+    \subitem {Group$<$ T $>$}, \hyperpage{17}
+    \subitem {MultimediaObject}, \hyperpage{24}
+    \subitem {Photo}, \hyperpage{27}
+    \subitem {Video}, \hyperpage{41}
+  \item {displayGroup}
+    \subitem {Manager}, \hyperpage{21}
+  \item {displayMultimediaObject}
+    \subitem {Manager}, \hyperpage{22}
+
+  \indexspace
+
+  \item {Errors}
+    \subitem {Socket}, \hyperpage{32}
+
+  \indexspace
+
+  \item {Film}, \hyperpage{12}
+    \subitem {display}, \hyperpage{14}
+    \subitem {Film}, \hyperpage{13, 14}
+    \subitem {getChapters}, \hyperpage{14}
+    \subitem {getNumChapters}, \hyperpage{14}
+    \subitem {operator=}, \hyperpage{15}
+    \subitem {setChapters}, \hyperpage{15}
+
+  \indexspace
+
+  \item {getChapters}
+    \subitem {Film}, \hyperpage{14}
+  \item {getDuration}
+    \subitem {Video}, \hyperpage{41}
+  \item {getFilename}
+    \subitem {MultimediaObject}, \hyperpage{24}
+  \item {getLatitude}
+    \subitem {Photo}, \hyperpage{27}
+  \item {getLongitude}
+    \subitem {Photo}, \hyperpage{27}
+  \item {getName}
+    \subitem {Group$<$ T $>$}, \hyperpage{17}
+    \subitem {MultimediaObject}, \hyperpage{24}
+  \item {getNumChapters}
+    \subitem {Film}, \hyperpage{14}
+  \item {Group}
+    \subitem {Group$<$ T $>$}, \hyperpage{16}
+  \item {Group$<$ T $>$}, \hyperpage{15}
+    \subitem {display}, \hyperpage{17}
+    \subitem {getName}, \hyperpage{17}
+    \subitem {Group}, \hyperpage{16}
+
+  \indexspace
+
+  \item {INF224 -\/ TP}, \hyperpage{1}, \hyperpage{3}
+  \item {InputBuffer}, \hyperpage{17}
+
+  \indexspace
+
+  \item {main}
+    \subitem {Client}, \hyperpage{11}
+    \subitem {MainFrame}, \hyperpage{18}
+  \item {MainFrame}, \hyperpage{18}
+    \subitem {main}, \hyperpage{18}
+    \subitem {MainFrame}, \hyperpage{18}
+  \item {Manager}, \hyperpage{19}
+    \subitem {createFilm}, \hyperpage{19}
+    \subitem {createGroup}, \hyperpage{20}
+    \subitem {createPhoto}, \hyperpage{20}
+    \subitem {createVideo}, \hyperpage{20}
+    \subitem {deleteGroup}, \hyperpage{21}
+    \subitem {deleteMultimediaObject}, \hyperpage{21}
+    \subitem {displayGroup}, \hyperpage{21}
+    \subitem {displayMultimediaObject}, \hyperpage{22}
+    \subitem {playMultimediaObject}, \hyperpage{22}
+  \item {MultimediaObject}, \hyperpage{22}
+    \subitem {display}, \hyperpage{24}
+    \subitem {getFilename}, \hyperpage{24}
+    \subitem {getName}, \hyperpage{24}
+    \subitem {MultimediaObject}, \hyperpage{23, 24}
+    \subitem {play}, \hyperpage{25}
+    \subitem {setFilename}, \hyperpage{25}
+    \subitem {setName}, \hyperpage{25}
+
+  \indexspace
+
+  \item {operator=}
+    \subitem {Film}, \hyperpage{15}
+
+  \indexspace
+
+  \item {Photo}, \hyperpage{26}
+    \subitem {display}, \hyperpage{27}
+    \subitem {getLatitude}, \hyperpage{27}
+    \subitem {getLongitude}, \hyperpage{27}
+    \subitem {Photo}, \hyperpage{27}
+    \subitem {play}, \hyperpage{28}
+    \subitem {setLatitude}, \hyperpage{28}
+    \subitem {setLongitude}, \hyperpage{28}
+  \item {play}
+    \subitem {MultimediaObject}, \hyperpage{25}
+    \subitem {Photo}, \hyperpage{28}
+    \subitem {Video}, \hyperpage{41}
+  \item {playMultimediaObject}
+    \subitem {Manager}, \hyperpage{22}
+
+  \indexspace
+
+  \item {read}
+    \subitem {SocketBuffer}, \hyperpage{35}
+  \item {readLine}
+    \subitem {SocketBuffer}, \hyperpage{35}
+  \item {receive}
+    \subitem {Socket}, \hyperpage{33}
+  \item {run}
+    \subitem {TCPServer}, \hyperpage{39}
+
+  \indexspace
+
+  \item {send}
+    \subitem {Client}, \hyperpage{11}
+    \subitem {Socket}, \hyperpage{33}
+  \item {ServerSocket}, \hyperpage{29}
+    \subitem {accept}, \hyperpage{29}
+    \subitem {bind}, \hyperpage{29}
+  \item {setChapters}
+    \subitem {Film}, \hyperpage{15}
+  \item {setDuration}
+    \subitem {Video}, \hyperpage{42}
+  \item {setFilename}
+    \subitem {MultimediaObject}, \hyperpage{25}
+  \item {setLatitude}
+    \subitem {Photo}, \hyperpage{28}
+  \item {setLongitude}
+    \subitem {Photo}, \hyperpage{28}
+  \item {setName}
+    \subitem {MultimediaObject}, \hyperpage{25}
+  \item {setReadSeparator}
+    \subitem {SocketBuffer}, \hyperpage{36}
+  \item {setWriteSeparator}
+    \subitem {SocketBuffer}, \hyperpage{36}
+  \item {Socket}, \hyperpage{30}
+    \subitem {bind}, \hyperpage{32}
+    \subitem {connect}, \hyperpage{32}
+    \subitem {Errors}, \hyperpage{32}
+    \subitem {receive}, \hyperpage{33}
+    \subitem {send}, \hyperpage{33}
+    \subitem {Socket}, \hyperpage{32}
+    \subitem {startup}, \hyperpage{33}
+  \item {SocketBuffer}, \hyperpage{34}
+    \subitem {read}, \hyperpage{35}
+    \subitem {readLine}, \hyperpage{35}
+    \subitem {setReadSeparator}, \hyperpage{36}
+    \subitem {setWriteSeparator}, \hyperpage{36}
+    \subitem {SocketBuffer}, \hyperpage{35}
+    \subitem {write}, \hyperpage{36}
+    \subitem {writeLine}, \hyperpage{37}
+  \item {SocketCnx}, \hyperpage{37}
+  \item {startup}
+    \subitem {Socket}, \hyperpage{33}
+
+  \indexspace
+
+  \item {TCPServer}, \hyperpage{38}
+    \subitem {Callback}, \hyperpage{38}
+    \subitem {run}, \hyperpage{39}
+    \subitem {TCPServer}, \hyperpage{39}
+
+  \indexspace
+
+  \item {Video}, \hyperpage{39}
+    \subitem {display}, \hyperpage{41}
+    \subitem {getDuration}, \hyperpage{41}
+    \subitem {play}, \hyperpage{41}
+    \subitem {setDuration}, \hyperpage{42}
+    \subitem {Video}, \hyperpage{40, 41}
+
+  \indexspace
+
+  \item {write}
+    \subitem {SocketBuffer}, \hyperpage{36}
+  \item {writeLine}
+    \subitem {SocketBuffer}, \hyperpage{37}
+
+\end{theindex}

@@ -1,0 +1,135 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}INF224 -\/ TP}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}INF224 -\/ TP}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Hierarchical Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class Hierarchy}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Class Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Class List}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}File Index}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}File List}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Class Documentation}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Client Class Reference}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Constructor \& Destructor Documentation}{11}{subsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.1}Client()}{11}{subsubsection.6.1.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Member Function Documentation}{11}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}main()}{11}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}send()}{12}{subsubsection.6.1.2.2}%
+\contentsline {section}{\numberline {6.2}Film Class Reference}{12}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{13}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Constructor \& Destructor Documentation}{13}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}Film()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{13}{subsubsection.6.2.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2.2}Film()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{14}{subsubsection.6.2.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Member Function Documentation}{14}{subsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.1}display()}{14}{subsubsection.6.2.3.1}%
+\contentsline {subsubsection}{\numberline {6.2.3.2}getChapters()}{14}{subsubsection.6.2.3.2}%
+\contentsline {subsubsection}{\numberline {6.2.3.3}getNumChapters()}{15}{subsubsection.6.2.3.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.4}operator=()}{15}{subsubsection.6.2.3.4}%
+\contentsline {subsubsection}{\numberline {6.2.3.5}setChapters()}{15}{subsubsection.6.2.3.5}%
+\contentsline {section}{\numberline {6.3}Group$<$ T $>$ Class Template Reference}{15}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{16}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Constructor \& Destructor Documentation}{16}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}Group()}{16}{subsubsection.6.3.2.1}%
+\contentsline {subsection}{\numberline {6.3.3}Member Function Documentation}{17}{subsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.1}display()}{17}{subsubsection.6.3.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.3.2}getName()}{17}{subsubsection.6.3.3.2}%
+\contentsline {section}{\numberline {6.4}Input\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buffer Struct Reference}{17}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Frame Class Reference}{18}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Detailed Description}{18}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Constructor \& Destructor Documentation}{18}{subsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.1}MainFrame()}{18}{subsubsection.6.5.2.1}%
+\contentsline {subsection}{\numberline {6.5.3}Member Function Documentation}{18}{subsection.6.5.3}%
+\contentsline {subsubsection}{\numberline {6.5.3.1}main()}{18}{subsubsection.6.5.3.1}%
+\contentsline {section}{\numberline {6.6}Manager Class Reference}{19}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Detailed Description}{19}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Member Function Documentation}{19}{subsection.6.6.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.1}createFilm()}{19}{subsubsection.6.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.6.2.2}createGroup()}{20}{subsubsection.6.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.3}createPhoto()}{20}{subsubsection.6.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.6.2.4}createVideo()}{21}{subsubsection.6.6.2.4}%
+\contentsline {subsubsection}{\numberline {6.6.2.5}deleteGroup()}{21}{subsubsection.6.6.2.5}%
+\contentsline {subsubsection}{\numberline {6.6.2.6}deleteMultimediaObject()}{21}{subsubsection.6.6.2.6}%
+\contentsline {subsubsection}{\numberline {6.6.2.7}displayGroup()}{21}{subsubsection.6.6.2.7}%
+\contentsline {subsubsection}{\numberline {6.6.2.8}displayMultimediaObject()}{22}{subsubsection.6.6.2.8}%
+\contentsline {subsubsection}{\numberline {6.6.2.9}playMultimediaObject()}{22}{subsubsection.6.6.2.9}%
+\contentsline {section}{\numberline {6.7}Multimedia\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object Class Reference}{22}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Detailed Description}{23}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Constructor \& Destructor Documentation}{23}{subsection.6.7.2}%
+\contentsline {subsubsection}{\numberline {6.7.2.1}MultimediaObject()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{23}{subsubsection.6.7.2.1}%
+\contentsline {subsubsection}{\numberline {6.7.2.2}MultimediaObject()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{24}{subsubsection.6.7.2.2}%
+\contentsline {subsection}{\numberline {6.7.3}Member Function Documentation}{24}{subsection.6.7.3}%
+\contentsline {subsubsection}{\numberline {6.7.3.1}display()}{24}{subsubsection.6.7.3.1}%
+\contentsline {subsubsection}{\numberline {6.7.3.2}getFilename()}{24}{subsubsection.6.7.3.2}%
+\contentsline {subsubsection}{\numberline {6.7.3.3}getName()}{25}{subsubsection.6.7.3.3}%
+\contentsline {subsubsection}{\numberline {6.7.3.4}play()}{25}{subsubsection.6.7.3.4}%
+\contentsline {subsubsection}{\numberline {6.7.3.5}setFilename()}{25}{subsubsection.6.7.3.5}%
+\contentsline {subsubsection}{\numberline {6.7.3.6}setName()}{25}{subsubsection.6.7.3.6}%
+\contentsline {section}{\numberline {6.8}Photo Class Reference}{26}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Detailed Description}{27}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.2}Constructor \& Destructor Documentation}{27}{subsection.6.8.2}%
+\contentsline {subsubsection}{\numberline {6.8.2.1}Photo()}{27}{subsubsection.6.8.2.1}%
+\contentsline {subsection}{\numberline {6.8.3}Member Function Documentation}{27}{subsection.6.8.3}%
+\contentsline {subsubsection}{\numberline {6.8.3.1}display()}{27}{subsubsection.6.8.3.1}%
+\contentsline {subsubsection}{\numberline {6.8.3.2}getLatitude()}{27}{subsubsection.6.8.3.2}%
+\contentsline {subsubsection}{\numberline {6.8.3.3}getLongitude()}{28}{subsubsection.6.8.3.3}%
+\contentsline {subsubsection}{\numberline {6.8.3.4}play()}{28}{subsubsection.6.8.3.4}%
+\contentsline {subsubsection}{\numberline {6.8.3.5}setLatitude()}{28}{subsubsection.6.8.3.5}%
+\contentsline {subsubsection}{\numberline {6.8.3.6}setLongitude()}{28}{subsubsection.6.8.3.6}%
+\contentsline {section}{\numberline {6.9}Server\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Socket Class Reference}{29}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Detailed Description}{29}{subsection.6.9.1}%
+\contentsline {subsection}{\numberline {6.9.2}Member Function Documentation}{29}{subsection.6.9.2}%
+\contentsline {subsubsection}{\numberline {6.9.2.1}accept()}{29}{subsubsection.6.9.2.1}%
+\contentsline {subsubsection}{\numberline {6.9.2.2}bind()}{30}{subsubsection.6.9.2.2}%
+\contentsline {section}{\numberline {6.10}Socket Class Reference}{30}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Detailed Description}{31}{subsection.6.10.1}%
+\contentsline {subsection}{\numberline {6.10.2}Member Enumeration Documentation}{32}{subsection.6.10.2}%
+\contentsline {subsubsection}{\numberline {6.10.2.1}Errors}{32}{subsubsection.6.10.2.1}%
+\contentsline {subsection}{\numberline {6.10.3}Constructor \& Destructor Documentation}{32}{subsection.6.10.3}%
+\contentsline {subsubsection}{\numberline {6.10.3.1}Socket()}{32}{subsubsection.6.10.3.1}%
+\contentsline {subsection}{\numberline {6.10.4}Member Function Documentation}{32}{subsection.6.10.4}%
+\contentsline {subsubsection}{\numberline {6.10.4.1}bind()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{32}{subsubsection.6.10.4.1}%
+\contentsline {subsubsection}{\numberline {6.10.4.2}bind()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{32}{subsubsection.6.10.4.2}%
+\contentsline {subsubsection}{\numberline {6.10.4.3}connect()}{33}{subsubsection.6.10.4.3}%
+\contentsline {subsubsection}{\numberline {6.10.4.4}receive()}{33}{subsubsection.6.10.4.4}%
+\contentsline {subsubsection}{\numberline {6.10.4.5}send()}{33}{subsubsection.6.10.4.5}%
+\contentsline {subsubsection}{\numberline {6.10.4.6}startup()}{34}{subsubsection.6.10.4.6}%
+\contentsline {section}{\numberline {6.11}Socket\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Buffer Class Reference}{34}{section.6.11}%
+\contentsline {subsection}{\numberline {6.11.1}Detailed Description}{35}{subsection.6.11.1}%
+\contentsline {subsection}{\numberline {6.11.2}Constructor \& Destructor Documentation}{35}{subsection.6.11.2}%
+\contentsline {subsubsection}{\numberline {6.11.2.1}SocketBuffer()}{35}{subsubsection.6.11.2.1}%
+\contentsline {subsection}{\numberline {6.11.3}Member Function Documentation}{35}{subsection.6.11.3}%
+\contentsline {subsubsection}{\numberline {6.11.3.1}read()}{35}{subsubsection.6.11.3.1}%
+\contentsline {subsubsection}{\numberline {6.11.3.2}readLine()}{36}{subsubsection.6.11.3.2}%
+\contentsline {subsubsection}{\numberline {6.11.3.3}setReadSeparator()}{36}{subsubsection.6.11.3.3}%
+\contentsline {subsubsection}{\numberline {6.11.3.4}setWriteSeparator()}{36}{subsubsection.6.11.3.4}%
+\contentsline {subsubsection}{\numberline {6.11.3.5}write()}{37}{subsubsection.6.11.3.5}%
+\contentsline {subsubsection}{\numberline {6.11.3.6}writeLine()}{37}{subsubsection.6.11.3.6}%
+\contentsline {section}{\numberline {6.12}Socket\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cnx Class Reference}{37}{section.6.12}%
+\contentsline {subsection}{\numberline {6.12.1}Detailed Description}{38}{subsection.6.12.1}%
+\contentsline {section}{\numberline {6.13}TCPServer Class Reference}{38}{section.6.13}%
+\contentsline {subsection}{\numberline {6.13.1}Detailed Description}{38}{subsection.6.13.1}%
+\contentsline {subsection}{\numberline {6.13.2}Member Typedef Documentation}{38}{subsection.6.13.2}%
+\contentsline {subsubsection}{\numberline {6.13.2.1}Callback}{38}{subsubsection.6.13.2.1}%
+\contentsline {subsection}{\numberline {6.13.3}Constructor \& Destructor Documentation}{39}{subsection.6.13.3}%
+\contentsline {subsubsection}{\numberline {6.13.3.1}TCPServer()}{39}{subsubsection.6.13.3.1}%
+\contentsline {subsection}{\numberline {6.13.4}Member Function Documentation}{39}{subsection.6.13.4}%
+\contentsline {subsubsection}{\numberline {6.13.4.1}run()}{39}{subsubsection.6.13.4.1}%
+\contentsline {section}{\numberline {6.14}Video Class Reference}{39}{section.6.14}%
+\contentsline {subsection}{\numberline {6.14.1}Detailed Description}{40}{subsection.6.14.1}%
+\contentsline {subsection}{\numberline {6.14.2}Constructor \& Destructor Documentation}{40}{subsection.6.14.2}%
+\contentsline {subsubsection}{\numberline {6.14.2.1}Video()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{40}{subsubsection.6.14.2.1}%
+\contentsline {subsubsection}{\numberline {6.14.2.2}Video()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{41}{subsubsection.6.14.2.2}%
+\contentsline {subsection}{\numberline {6.14.3}Member Function Documentation}{41}{subsection.6.14.3}%
+\contentsline {subsubsection}{\numberline {6.14.3.1}display()}{41}{subsubsection.6.14.3.1}%
+\contentsline {subsubsection}{\numberline {6.14.3.2}getDuration()}{41}{subsubsection.6.14.3.2}%
+\contentsline {subsubsection}{\numberline {6.14.3.3}play()}{42}{subsubsection.6.14.3.3}%
+\contentsline {subsubsection}{\numberline {6.14.3.4}setDuration()}{42}{subsubsection.6.14.3.4}%
+\contentsline {chapter}{\numberline {7}File Documentation}{43}{chapter.7}%
+\contentsline {section}{\numberline {7.1}ccsocket.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{43}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Film.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{45}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Group.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{46}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{46}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Multimedia\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{47}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Photo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{47}{section.7.6}%
+\contentsline {section}{\numberline {7.7}tcpserver.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{48}{section.7.7}%
+\contentsline {section}{\numberline {7.8}Video.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{48}{section.7.8}%
+\contentsline {chapter}{Index}{49}{section*.35}%
