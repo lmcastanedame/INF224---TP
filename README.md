@@ -11,9 +11,9 @@ The project comprises two stages across different programming languages and fram
 Together, these stages aim to teach comprehensive software development skills, from backend logic in C++ to frontend GUI development in Java Swing, culminating in a complete system for multimedia management and display.
 
 ## Directory Structure
-• Castaneda_Medina__Laura_Manuela/: Main project directory.
-  – cpp/: Contains all C++ related files, including source code and Makefile.
-  – swing/: Contains all Java Swing related files, including source code and Makefile.
+- Castaneda_Medina__Laura_Manuela/: Main project directory.
+-   cpp/: Contains all C++ related files, including source code and Makefile.
+-   swing/: Contains all Java Swing related files, including source code and Makefile.
 
 ## C++ Component
 This stage involves creating a multimedia set‐top box software prototype, focusing on object‐oriented design principles in C++. Base and derived classes where develop for multimedia objects ﴾like photos, videos, and films﴿, implement testing programs, and handle multimedia content effectively.
